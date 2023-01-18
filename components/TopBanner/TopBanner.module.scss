@@ -1,0 +1,147 @@
+.topBanner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 70px;
+
+    @media (min-width: 720px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 720px) {
+            width: 48%;
+            height: 370px;         
+        }
+
+        &__headLine {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__article {
+            position: relative;
+            margin-top: 30px;
+            p {
+                font-size: 15px;
+                line-height: 32px;
+            }
+        }
+
+        &__finder {
+            position: relative;
+            form {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .search_line {
+                position: relative;
+                height: 24px;
+                input {
+                    position: relative;
+                    padding: 5px;
+                    border: none;
+                    background: transparent;
+                    z-index: 9;
+                    outline: none;
+                }
+
+                &__palceholder {
+                    position: absolute;
+                    top: -1px;
+                    left: 5px;
+                    height: 29px;
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        margin-right: 20px;
+                    }
+
+                    span {
+                        color: #807C7C;
+                        font-size:  15px;
+                        line-height: 29px;
+                    }
+                }
+            }
+
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 50px;
+                background: #F2726C;
+                color: white;
+                font-family: 'Poppins';
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 140%;
+                letter-spacing: 1px;
+                border: none;
+                border-radius: 30px;
+            }
+        }
+    }
+
+    &__parrot {
+        position: relative;
+        width: 100%;
+        height: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('/assets/Parrot.png');
+        background-repeat: no-repeat;
+        background-position: -125% 50%;
+        @media (min-width: 400px) {
+            background-position: 50% 50%;
+        }
+
+        @media (min-width: 720px) {
+            // background-position: 50% 10%;
+            background-size: contain;
+            height: 370px; 
+            width: 48%;
+        }
+
+        &__members {
+            position: absolute;
+            display: flex;
+            bottom: 120px;
+            left: 0;
+            width: 210px;
+            height: 250px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            @media (min-width: 500px) {
+                bottom: 25px;
+                left: 0;
+                width: 250px;
+                height: 280px;
+            }
+
+            @media (min-width: 720px) {
+                bottom: 0px;
+                height: 240px;
+            }
+        }
+    }
+}
