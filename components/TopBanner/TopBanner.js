@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { IconHeadLine } from "../common/Icons/IconHeadLine";
 import { IconHeart } from "../common/Icons/IconHeart";
 import { IconParrot } from "../common/Icons/IconParrot";
