@@ -1,5 +1,7 @@
 import Image from "next/image";
+import { IconHeadLine } from "../common/Icons/IconHeadLine";
 import { IconHeart } from "../common/Icons/IconHeart";
+import { IconParrot } from "../common/Icons/IconParrot";
 import { IconPlace } from "../common/Icons/IconPlace";
 import style from './TopBanner.module.scss'
 
@@ -8,12 +10,7 @@ export function TopBanner() {
         <div className={style.topBanner}>
             <div className={style.topBanner__text}>
                 <div className={style.topBanner__text__headLine}>
-                    <Image
-                        src='/assets/Headline.png'
-                        alt="Headline"
-                        width={550}
-                        height={300}
-                    />
+                    <IconHeadLine />
                 </div>
 
                 <div className={style.topBanner__text__article}>
@@ -35,19 +32,12 @@ export function TopBanner() {
             </div>
 
             <div className={style.topBanner__parrot}>
-                {/* <Image
-                    src='/assets/Parrot.png'
-                    alt="Parrot"
-                    width={360}
-                    height={500}
-                /> */}
+
+                <div className={style.topBanner__parrot__svgContainer}>
+                    <IconParrot />
+                </div>
+                
                 <div className={style.topBanner__parrot__members}>
-                    <Image
-                        src='/assets/Group29.png'
-                        alt="Background"
-                        width={300}
-                        height={360}
-                    />
                     <IconHeart />
                     <div className={style.count}>
                         <span>Members</span>
