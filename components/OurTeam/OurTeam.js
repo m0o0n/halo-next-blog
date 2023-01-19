@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function OurTeam() {
     return (
-        <div className={style.ourTeam}>
+        <section className={style.ourTeam}>
             <div className={style.ourTeam__headLine}>
                 <h2>Our Top Team</h2>
                 <p>Learn more about how you can save <br /> our planet's nature. </p>
@@ -49,6 +49,6 @@ export function OurTeam() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
