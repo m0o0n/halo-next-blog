@@ -1,0 +1,193 @@
+.Info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 100px;
+    max-width: 1280px;
+    @media (min-width: 668px) {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 190px;
+    }
+
+    @media (min-width: 1024px) {
+        justify-content: space-around;
+        margin: 190px auto 0;
+    }
+
+    &__text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 420px) {
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: 668px) {
+            width: 48%;
+            align-items: flex-start;
+        }
+
+        h2 {
+            position: relative;
+            height: 42px;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 150%;
+            text-align:  left;
+            color: #222433;
+            margin: 0 0 20px 18px;
+
+            @media (min-width: 1024px) {
+                height: 56px;
+                font-size: 40px;
+                line-height: 56px;
+                margin: 0 0 40px 18px;
+            }
+        }
+
+        p {
+            width: 312px;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 175%;
+            color: #1E1A20;
+            opacity: 0.9;
+            text-align: left;
+            margin: 0 0 32px 18px;
+
+            @media (min-width: 420px) {
+                text-align: center;
+            }
+            @media (min-width: 668px) {
+                text-align: left;
+            }
+    
+            @media (min-width: 1024px) {
+                font-size: 18px;
+                line-height: 32px;
+                margin: 0 0 56px 18px;
+            }
+        }
+
+        button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 166px;
+            height: 48px;
+            background: #F2726C;
+            margin: 0 0 0 18px;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 140%;
+            color: white;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 30px;
+            transition: all .4s linear;
+            cursor: pointer;
+
+            &:hover {
+                color: #F7F3F4;
+                background: #ff3429;
+            }
+        }
+    }
+
+    &__tools {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        
+        @media (min-width: 668px) {
+            margin-top: 0px;
+            width: 48%;
+        }
+
+        .tool {
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                margin: 0 auto;
+                border-bottom: 1px solid rgb(30, 26, 32, 0.2);
+                &:nth-child(1) {
+                    .tool__group {
+                        @media (min-width: 668px) {
+                            margin-top: 0px;
+                            padding: 0 0 32px 0;
+                        }
+                    }
+                   
+                }
+            &__group {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 32px 0;
+                
+                h3 {
+                    position: relative;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: #1E1A20;
+                    opacity: 0.9;
+                    margin: 0 50px 0 0;
+
+                    @media (min-width: 1024px) {
+                        font-size: 24px;
+                        line-height: 34px;
+                    }
+                }
+
+                button {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-width: 40px;
+                    min-height: 40px;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: white;
+                    background: #F2726C;
+                    border-radius: 100%;
+                    border: none;
+                    transition: all .4s linear;
+                    cursor: pointer;
+        
+                    &:hover {
+                        color: #F7F3F4;
+                        background: #ff3429;
+                    }
+                }
+            }
+
+            &__text {
+                position: relative;
+                top: -16px;
+                margin-bottom: 8px;
+
+                p {
+                    font-size: 15px;
+                    line-height: 175%;
+                    color: #1E1A20;
+                    opacity: 0.9;
+
+                    @media (min-width: 1024px) {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
