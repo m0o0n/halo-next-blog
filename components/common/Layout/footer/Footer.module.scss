@@ -1,0 +1,117 @@
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    @media (min-width: 500px) {
+        flex-direction: row;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        
+        align-self: flex-start;
+        margin-bottom: 30px;
+
+        @media (min-width: 500px) {
+            display: none;
+        }
+
+        h2 {
+            height: 48px;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 48px;
+            text-transform: uppercase;
+            color: #333333;
+        }
+
+        p {
+            height: 24px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 24px;
+            letter-spacing: 0.3px;
+            color: #333333;
+            opacity: 0.75;
+        }
+    }
+
+    &__media_group {
+        display: flex;
+        justify-content: space-between;
+        
+        @media (min-width: 500px) {
+            width: 100%;
+        }
+
+        .footer__contacts {
+            display: none;
+            
+            h2 {
+                height: 32px;
+                line-height: 32px;
+                letter-spacing: 0.3px;
+                margin-bottom: 20px;
+                
+                @media (min-width: 668px) {
+                    font-size: 34px;
+                    line-height: 48px;
+                }
+            }
+
+            @media (min-width: 500px) {
+                display: flex;
+            }
+            
+        }
+    }
+
+    &__headquarters, &__social {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h2 {
+            height: 32px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: 0.3px;
+            color: #333333;
+            align-self: center;
+            margin-bottom: 20px;
+
+            @media (min-width: 668px) {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 24px;
+            letter-spacing: 0.3px;
+            color: #333333;
+        }
+    }
+
+    &__social {
+        div {
+            display: flex;
+            justify-content: center;
+        }
+        svg {
+            width: 32px;
+            height: 32px;
+            margin: 0 7px;
+            cursor: pointer;
+        }
+    }
+    
+}

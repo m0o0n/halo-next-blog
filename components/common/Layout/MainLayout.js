@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { Footer } from './footer/Footer';
 import { Header } from "./header/Header";
 
 export function MainLayout({children, title}){
@@ -13,7 +14,7 @@ export function MainLayout({children, title}){
             <Header />
             
             <main className='main'>{children}</main>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }
