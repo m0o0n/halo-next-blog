@@ -50,6 +50,7 @@
             .search_line {
                 position: relative;
                 height: 24px;
+                min-width: 210px;
                 input {
                     position: relative;
                     padding: 5px;
@@ -85,14 +86,12 @@
                 align-items: center;
                 width: 100px;
                 height: 50px;
-                background: #F2726C;
                 color: white;
                 font-family: 'Poppins';
                 font-weight: 700;
                 font-size: 12px;
                 line-height: 140%;
                 letter-spacing: 1px;
-                border: none;
                 border-radius: 30px;
             }
         }

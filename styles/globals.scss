@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+p, h1, h2, h3, button, span, input, div {
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+button, input[type="submit"] {
+    background: #F2726C;
+    border: none;
+    transition: all .4s linear;
+    cursor: pointer;
+        
+    &:hover {
+        color: #F7F3F4;
+        background: #ff3429;
+    }
+}
+/* Slider */
+
+@import './asset/home.scss';

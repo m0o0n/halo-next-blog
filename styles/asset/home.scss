@@ -1,0 +1,53 @@
+.home_page_slider {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFBD9E;
+    margin: 190px 0 100px 0;
+
+    &__pagination_container {
+        position: relative;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        margin: 32px auto 0 auto;
+
+        svg {
+            cursor: pointer;
+            margin-top: 4px;
+        }
+        .swiper-pagination {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            color: gray;
+            opacity: 0.8;
+            font-size: 24px;
+            letter-spacing: 2px;
+            line-height: 32px;
+            .swiper-pagination-current {
+                color: black;
+                opacity: 1;
+            }
+        }
+    }
+
+    .swiper-slide {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+    }
+}

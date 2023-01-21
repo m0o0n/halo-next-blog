@@ -60,12 +60,64 @@
 
     &__bars {
         display: block;
+        cursor: pointer;
         @media (min-width: 668px) {
             display: none;
         }
     }
 
-    &__mobileNav {
-        display: none;
+}
+
+.mobileNav {
+    position: absolute;
+    top: 110px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: white;
+    z-index: 9999;
+
+    nav {
+        position: relative;
+        flex-direction: column;
+        background: white;
+        height: 336px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 72px;
+        margin-bottom: 165px;
+        span {
+            font-size: 18px;
+            color: black;
+            cursor: pointer;
+            transition: all .4s ease-out;
+
+            &:hover {
+                text-shadow: 0 0 .65px rgb(0, 0, 0), 0 0 .65px rgb(0, 0, 0);
+            }
+        }
+    }
+
+    &__action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 50px;
+        margin: 0 auto;
+        transition: all .4s linear;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 40px;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
     }
 }

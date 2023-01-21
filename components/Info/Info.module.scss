@@ -80,7 +80,6 @@
             justify-content: center;
             width: 166px;
             height: 48px;
-            background: #F2726C;
             margin: 0 0 0 18px;
             font-size: 13px;
             font-weight: 700;
@@ -89,15 +88,7 @@
             text-align: center;
             letter-spacing: 1px;
             text-transform: uppercase;
-            border: none;
             border-radius: 30px;
-            transition: all .4s linear;
-            cursor: pointer;
-
-            &:hover {
-                color: #F7F3F4;
-                background: #ff3429;
-            }
         }
     }
 
@@ -158,16 +149,7 @@
                     font-size: 22px;
                     font-weight: 700;
                     color: white;
-                    background: #F2726C;
                     border-radius: 100%;
-                    border: none;
-                    transition: all .4s linear;
-                    cursor: pointer;
-        
-                    &:hover {
-                        color: #F7F3F4;
-                        background: #ff3429;
-                    }
                 }
             }
 
