@@ -8,13 +8,14 @@ export function Tool(props) {
         <div className={style.tool}>
             <div className={style.tool__group}>
                 <h3>{props.tool_article}</h3>
-                <button onClick={() => {setIsShow(!isShow)}}>{isShow ? <IconPlus /> : <IconMinus />}</button>
+                <button onClick={() => { setIsShow(!isShow) }}>{isShow ? <IconPlus /> : <IconMinus />}</button>
             </div>
-            { isShow
+            {isShow
                 ? null
                 : <div className={style.tool__text}>
                     <p>{props.tool_text}</p>
-                </div> }
+                </div>
+            }
         </div>
     )
 }

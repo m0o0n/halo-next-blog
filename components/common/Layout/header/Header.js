@@ -8,12 +8,12 @@ export function Header() {
 
     const swichMobileNav = () => {
         setMobileNavIsActive(!mobileNavIsActive)
-        if(mobileNavIsActive){
+        if (mobileNavIsActive) {
             document.documentElement.style.overflow = 'hidden'
         } else {
             document.documentElement.style.overflow = 'visible'
         }
-        
+
     }
     return (
         <>
