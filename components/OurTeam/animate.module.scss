@@ -1,9 +1,13 @@
 .animateArticle {
-    animation-duration: .4s;
-    animation-name: article-animation;
+    @media (min-width: 786px) {
+        animation-duration: .4s;
+        animation-name: article-animation;
+    }
+    
 }
 
 @keyframes article-animation {
+    
     from {
         left: -100%;
     }
@@ -14,8 +18,10 @@
 }
 
 .animateParagraph {
-    animation-duration: .4s;
+    @media (min-width: 786px) {
+        animation-duration: .4s;
     animation-name: paragraph-animation;
+    }
 }
 
 @keyframes paragraph-animation {
@@ -29,8 +35,8 @@
 }
 
 .animateTeam {
-    animation-duration: 1s;
-    animation-name: team-animation;
+        animation-duration: 1s;
+        animation-name: team-animation;
 }
 
 @keyframes team-animation {

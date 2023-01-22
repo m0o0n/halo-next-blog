@@ -1,7 +1,9 @@
 .animateParagraph {
-    position: relative;
-    animation-duration: .5s;
-    animation-name: paragraph-animation;
+    @media (min-width: 786px) {
+        position: relative;
+        animation-duration: .5s;
+        animation-name: paragraph-animation;
+    }
 }
 
 @keyframes paragraph-animation {
@@ -15,9 +17,11 @@
 }
 
 .animateSearch {
-    position: relative;
-    animation-duration: .5s;
-    animation-name: search-animation;
+    @media (min-width: 786px) {
+        position: relative;
+        animation-duration: .5s;
+        animation-name: search-animation;
+    }
 }
 
 @keyframes search-animation {
@@ -38,11 +42,11 @@
 
 @keyframes members-animation {
     0% {
-        bottom:-100%;
+        left: -100%;
     }
 
     100% {
-        bottom:  0%;
+        left:  0%;
     }
 }
 
