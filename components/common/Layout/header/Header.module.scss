@@ -89,6 +89,7 @@
         align-items: center;
         margin-top: 72px;
         margin-bottom: 165px;
+
         span {
             font-size: 18px;
             color: black;
@@ -120,4 +121,8 @@
             box-sizing: border-box;
         }
     }
+}
+
+.active {
+    text-shadow: 0 0 .65px rgb(0, 0, 0), 0 0 .65px rgb(0, 0, 0);
 }

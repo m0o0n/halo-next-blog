@@ -1,11 +1,32 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from "next/router";
 import { useState } from 'react'
 import style from './Header.module.scss'
+
+export function Navigation() {
+    const router = useRouter()
+    return (
+        <nav className={style.header__navigate}>
+            <span>
+                <Link className={router.pathname == "/" ? style.active : ""} href='/'>Home</Link>
+            </span>
+            <span>
+                <Link className={router.pathname == "/OurMission" ? style.active : ""} href='/OurMission'>Our mission</Link>
+            </span>
+            <span>
+                <Link className={router.pathname == "/Palces" ? style.active : ""} href='/Palces'>Places</Link>
+            </span>
+            <span>
+                <Link className={router.pathname == "/Team" ? style.active : ""} href='/Team'>Team</Link>
+            </span>
+        </nav>
+    )
+}
 
 export function Header() {
 
     const [mobileNavIsActive, setMobileNavIsActive] = useState(true)
-
     const swichMobileNav = () => {
         setMobileNavIsActive(!mobileNavIsActive)
         if (mobileNavIsActive) {
@@ -26,12 +47,7 @@ export function Header() {
                         height={70}
                     />
                 </div>
-                <nav className={style.header__navigate}>
-                    <span>Home</span>
-                    <span>Our mission</span>
-                    <span>Places</span>
-                    <span>Team</span>
-                </nav>
+                <Navigation />
                 <div className={style.header__action}>Apply</div>
                 <div className={style.header__bars}>
                     {mobileNavIsActive
@@ -48,12 +64,7 @@ export function Header() {
             {mobileNavIsActive ? null
                 : <div className={style.mobileNav}>
                     <div className={style.mobileNav__close}></div>
-                    <nav>
-                        <span>Home</span>
-                        <span>Our mission</span>
-                        <span>Places</span>
-                        <span>Team</span>
-                    </nav>
+                    <Navigation />
                     <div className={style.mobileNav__action}>Apply</div>
                 </div>}
 
