@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from "next/router";
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import style from './Header.module.scss'
 
 export function Navigation() {
@@ -27,6 +27,11 @@ export function Navigation() {
 export function Header() {
 
     const [mobileNavIsActive, setMobileNavIsActive] = useState(true)
+    const router = useRouter()
+    useEffect(()=>{
+        document.documentElement.style.overflow = 'visible'
+    }, [router])
+    
     const swichMobileNav = () => {
         setMobileNavIsActive(!mobileNavIsActive)
         if (mobileNavIsActive) {
