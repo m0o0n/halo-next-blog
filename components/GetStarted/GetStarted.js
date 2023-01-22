@@ -1,13 +1,24 @@
 import style from './GetStarted.module.scss'
+import animate from './animate.module.scss'
+import { useInView } from 'react-intersection-observer';
 
 export function GetStarted() {
+    
+    const { ref: footerRef, inView: footerVisible } = useInView()
     return (
-        <section className={style.getStarted}>
+        <section ref={footerRef} className={style.getStarted}>
             <div className={style.getStarted__text}>
                 <h2>Get started today!</h2>
                 <p>Learn more about how you can save our planet's nature. From smart consumption to switching to renewable energy, each of us can do our part to save the planet. </p>
             </div>
-            <form className={style.getStarted__form}>
+            <form
+                className={`
+                    ${footerVisible
+                    ? animate.animateForm
+                    : ''}
+                    ${style.getStarted__form}
+                `}
+            >
                 <h3>Log in</h3>
                 <input type="text" placeholder='Name' />
                 <input type="text" placeholder='Email' />

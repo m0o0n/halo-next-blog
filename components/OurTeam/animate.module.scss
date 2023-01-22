@@ -1,0 +1,46 @@
+.animateArticle {
+    animation-duration: .4s;
+    animation-name: article-animation;
+}
+
+@keyframes article-animation {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left:  0%;
+    }
+}
+
+.animateParagraph {
+    animation-duration: .4s;
+    animation-name: paragraph-animation;
+}
+
+@keyframes paragraph-animation {
+    from {
+        right: -100%;
+    }
+
+    to {
+       right: 0%;
+    }
+}
+
+.animateTeam {
+    animation-duration: 1s;
+    animation-name: team-animation;
+}
+
+@keyframes team-animation {
+    from {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,73 @@
+.animateParagraph {
+    position: relative;
+    animation-duration: .5s;
+    animation-name: paragraph-animation;
+}
+
+@keyframes paragraph-animation {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left:  0%;
+    }
+}
+
+.animateSearch {
+    position: relative;
+    animation-duration: .5s;
+    animation-name: search-animation;
+}
+
+@keyframes search-animation {
+    0% {
+        right:-100%;
+    }
+
+    100% {
+        right:  0%;
+    }
+}
+
+.animateMembers {
+    position: absolute;
+    animation-duration: .5s;
+    animation-name: members-animation;
+}
+
+@keyframes members-animation {
+    0% {
+        bottom:-100%;
+    }
+
+    100% {
+        bottom:  0%;
+    }
+}
+
+.animateHeadLine {
+    path {
+        animation-duration: 3s;
+        animation-name: draw-animation;
+        stroke: #222433;
+        fill: #222433;
+        stroke-width: 5;
+        stroke-dashoffset: 3380;
+        stroke-dasharray: 3380;
+    }
+}
+
+@keyframes draw-animation {
+    from {
+        stroke-dashoffset: 3380;
+        fill: #222433;
+        fill-opacity: 0;
+      }
+      to {
+        stroke-dashoffset: 0;
+        fill: #222433;
+        stroke-width: 0;
+        fill-opacity: 1;
+      }
+}

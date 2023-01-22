@@ -1,16 +1,41 @@
 import style from './OurTeam.module.scss'
+import animate from './animate.module.scss'
 import Image from "next/image";
+import { useInView } from 'react-intersection-observer';
 
 export function OurTeam() {
+
+    const { ref: headLineRef, inView: headLineIsVisible } = useInView()
+    const { ref: teamRef, inView: teamIsVisible } = useInView()
     return (
         <section className={style.ourTeam}>
-            <div className={style.ourTeam__headLine}>
-                <h2>Our Top Team</h2>
-                <p>Learn more about how you can save <br /> our planet's nature. </p>
+            <div ref={headLineRef} className={style.ourTeam__headLine}>
+                <h2
+                    className={headLineIsVisible
+                        ? animate.animateArticle
+                        : ''
+                    }
+                >
+                    Our Top Team
+                </h2>
+                <p
+                    className={headLineIsVisible
+                        ? animate.animateParagraph
+                        : ''
+                    }
+                >
+                    Learn more about how you can save <br /> our planet's nature.
+                </p>
             </div>
 
-            <div className={style.ourTeam__galery}>
-                <div className={style.ourTeam__galery__images}>
+            <div ref={teamRef} className={style.ourTeam__galery}>
+                <div
+                    className={`${teamIsVisible
+                        ? animate.animateTeam
+                        : ''} 
+                        ${style.ourTeam__galery__images}
+                    `}
+                >
                     <div className={style.one}>
                         <Image
                             src='/assets/img1.png'
