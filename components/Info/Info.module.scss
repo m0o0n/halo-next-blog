@@ -146,10 +146,17 @@
                     align-items: center;
                     min-width: 40px;
                     min-height: 40px;
+                    max-width: 40px;
+                    max-height: 40px;
                     font-size: 22px;
                     font-weight: 700;
                     color: white;
                     border-radius: 100%;
+                    
+                    svg{
+                        max-width: 40px;
+                        max-height: 40px;
+                    }
                 }
             }
 

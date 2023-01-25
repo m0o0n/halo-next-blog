@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from "next/router";
 import { useEffect, useState } from 'react'
+import { IconLogo } from '../../Icons/IconLogo';
 import style from './Header.module.scss'
 
 export function Navigation() {
@@ -28,10 +29,10 @@ export function Header() {
 
     const [mobileNavIsActive, setMobileNavIsActive] = useState(true)
     const router = useRouter()
-    useEffect(()=>{
+    useEffect(() => {
         document.documentElement.style.overflow = 'visible'
     }, [router])
-    
+
     const swichMobileNav = () => {
         setMobileNavIsActive(!mobileNavIsActive)
         if (mobileNavIsActive) {
@@ -45,12 +46,7 @@ export function Header() {
         <>
             <header className={style.header}>
                 <div className={style.header__logo}>
-                    <Image
-                        src="/assets/Logo.png"
-                        alt="Logo"
-                        width={320}
-                        height={70}
-                    />
+                    <IconLogo />
                 </div>
                 <Navigation />
                 <div className={style.header__action}>Apply</div>
